@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-05-10T18:50:38.132511" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Keyword Driven" source="/opt/odoo15/odoo/addons/om_hospital/tests/keyword-driven/robot/robot_keyword_driven.robot">
+<test id="s1-t1" name="Valid Login" line="13">
+<kw name="Open Browser To Login Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:50:38.302385" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8069/web/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-10T18:50:38.302037" elapsed="4.593801"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-10T18:50:42.896434" elapsed="0.000586"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:50:43.906119" level="INFO">Page title is 'Login | My Website'.</msg>
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-10T18:50:42.897288" elapsed="1.009067"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:50:38.300698" elapsed="5.605871"/>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:50:43.908118" level="INFO">Typing text 'johnnyblaze1999.sg@gmail.com' into text field 'id=login'.</msg>
+<arg>id=login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:50:43.907568" elapsed="3.077802"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2024-05-10T18:50:43.907017" elapsed="3.078532"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:50:46.986658" level="INFO">Typing text 'student' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:50:46.986329" elapsed="3.035455"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-05-10T18:50:46.985875" elapsed="3.036105"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:50:50.023065" level="INFO">Clicking button 'css=.btn-primary'.</msg>
+<arg>css=.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:50:50.022835" elapsed="8.414546"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:50:50.022378" elapsed="8.415189"/>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:50:59.441661" level="INFO">Page title is 'Odoo - Discuss'.</msg>
+<arg>Odoo - Discuss</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-10T18:50:58.438253" elapsed="1.003575"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:50:58.437874" elapsed="1.004112"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:50:38.299841" elapsed="21.142428"/>
+</test>
+<test id="s1-t2" name="Create Robot Patient" line="19">
+<kw name="Go To Patients Page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:50:59.443838" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;menu_id=285&amp;action=395&amp;model=hospital.patient&amp;view_type=list'</msg>
+<arg>http://localhost:8069/web#cids=1&amp;menu_id=285&amp;action=395&amp;model=hospital.patient&amp;view_type=list</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-10T18:50:59.443682" elapsed="1.013200"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:50:59.443202" elapsed="1.013872"/>
+</kw>
+<kw name="Create New Patient">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:00.458070" level="INFO">Clicking button 'xpath=//button[@data-original-title="Create record"]'.</msg>
+<arg>xpath=//button[@data-original-title="Create record"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:00.457828" elapsed="5.240259"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:05.699393" level="INFO">Typing text 'Robot Patient' into text field 'name'.</msg>
+<arg>name</arg>
+<arg>Robot Patient</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:05.698867" elapsed="3.037037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:08.736581" level="INFO">Typing text '30' into text field 'age'.</msg>
+<arg>age</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:08.736260" elapsed="3.041650"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:11.778511" level="INFO">Clicking button 'xpath=//button[@title='Save record']'.</msg>
+<arg>xpath=//button[@title='Save record']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:11.778230" elapsed="5.247790"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:00.457444" elapsed="16.568776"/>
+</kw>
+<kw name="Verify Patient Creation">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:19.037608" level="INFO">Current page contains text 'Robot Patient'.</msg>
+<arg>Robot Patient</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-10T18:51:17.026956" elapsed="2.010802"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:17.026526" elapsed="2.011391"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:50:59.442647" elapsed="19.595547"/>
+</test>
+<test id="s1-t3" name="Delete Robot Patient" line="23">
+<kw name="Remove Patient">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:19.039696" level="INFO">Clicking button 'xpath=//button[@data-original-title="Additional actions"]'.</msg>
+<arg>xpath=//button[@data-original-title="Additional actions"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:19.039473" elapsed="5.238981"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:24.279410" level="INFO">Executing JavaScript:
+document.evaluate("//*[contains(text(), 'Delete')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()
+Without any arguments.</msg>
+<arg>document.evaluate("//*[contains(text(), 'Delete')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-10T18:51:24.278842" elapsed="1.017810"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:25.297634" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary']'.</msg>
+<arg>xpath=//button[@class='btn btn-primary']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:25.297309" elapsed="5.245686"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:19.039098" elapsed="11.504147"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:19.038543" elapsed="11.505019"/>
+</test>
+<test id="s1-t4" name="Create Patient Without Name" line="25">
+<kw name="Go To Patients Page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:30.545780" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;menu_id=285&amp;action=395&amp;model=hospital.patient&amp;view_type=list'</msg>
+<arg>http://localhost:8069/web#cids=1&amp;menu_id=285&amp;action=395&amp;model=hospital.patient&amp;view_type=list</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-10T18:51:30.545524" elapsed="1.025019"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:30.545032" elapsed="1.025884"/>
+</kw>
+<kw name="Create Empty Name Patient">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:31.571861" level="INFO">Clicking button 'xpath=//button[@data-original-title="Create record"]'.</msg>
+<arg>xpath=//button[@data-original-title="Create record"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:31.571636" elapsed="5.237662"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:36.810036" level="INFO">Typing text '30' into text field 'age'.</msg>
+<arg>age</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:36.809660" elapsed="3.029102"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:39.839244" level="INFO">Clicking button 'xpath=//button[@title='Save record']'.</msg>
+<arg>xpath=//button[@title='Save record']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:39.839025" elapsed="5.267224"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:31.571250" elapsed="13.535201"/>
+</kw>
+<kw name="Verify Field Error">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:47.122260" level="INFO">Current page contains text 'Invalid fields:'.</msg>
+<arg>Invalid fields:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-10T18:51:45.107367" elapsed="2.015047"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:45.106875" elapsed="2.015676"/>
+</kw>
+<kw name="Discard">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:47.123508" level="INFO">Clicking button 'xpath=//button[@title='Discard record']'.</msg>
+<arg>xpath=//button[@title='Discard record']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:47.123282" elapsed="5.242228"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:47.122903" elapsed="5.242835"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:30.544076" elapsed="21.822010"/>
+</test>
+<test id="s1-t5" name="Create Patient With Invalid Age" line="30">
+<kw name="Go To Patients Page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:52.368370" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;menu_id=285&amp;action=395&amp;model=hospital.patient&amp;view_type=list'</msg>
+<arg>http://localhost:8069/web#cids=1&amp;menu_id=285&amp;action=395&amp;model=hospital.patient&amp;view_type=list</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-10T18:51:52.368170" elapsed="1.005811"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:52.367633" elapsed="1.006542"/>
+</kw>
+<kw name="Create Invalid Age Patient">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:53.375276" level="INFO">Clicking button 'xpath=//button[@data-original-title="Create record"]'.</msg>
+<arg>xpath=//button[@data-original-title="Create record"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:53.375044" elapsed="5.242722"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:51:58.618393" level="INFO">Typing text 'Robot Patient' into text field 'name'.</msg>
+<arg>name</arg>
+<arg>Robot Patient</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:51:58.618069" elapsed="3.042431"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:52:01.661091" level="INFO">Typing text 'invalid' into text field 'age'.</msg>
+<arg>age</arg>
+<arg>invalid</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:52:01.660815" elapsed="3.057551"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:52:04.718934" level="INFO">Clicking button 'xpath=//button[@title='Save record']'.</msg>
+<arg>xpath=//button[@title='Save record']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-10T18:52:04.718667" elapsed="5.242294"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:53.374666" elapsed="16.586640"/>
+</kw>
+<kw name="Verify Field Error">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-10T18:52:11.975410" level="INFO">Current page contains text 'Invalid fields:'.</msg>
+<arg>Invalid fields:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-10T18:52:09.962790" elapsed="2.012756"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:52:09.961929" elapsed="2.013743"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-10T18:52:11.976063" elapsed="1.657907"/>
+</kw>
+<status status="PASS" start="2024-05-10T18:51:52.366684" elapsed="21.267469"/>
+</test>
+<status status="PASS" start="2024-05-10T18:50:38.133695" elapsed="95.501046"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Robot Keyword Driven">Robot Keyword Driven</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
